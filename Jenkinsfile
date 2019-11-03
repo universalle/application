@@ -10,7 +10,7 @@ pipeline {
         stage('Building App Image') {
             steps {
                 script {
-                    appimage = docker.build(app/"gcr.io/identityplatform/myimages/jenkins-server:${env.BUILD_ID}")
+                    appimage = docker.build("gcr.io/identityplatform/myimages/jenkins-server:${env.BUILD_ID}")
                 }
             }
         }
